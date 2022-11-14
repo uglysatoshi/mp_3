@@ -69,6 +69,7 @@ void Multiplication(Fraction list[], int n) // Функция умножения
     cout << "Введите число: "; cin >> value;
     for (int i = 0; i<n; i++)
     {
+        double bb = 0;
         double counter = 0.00;
         counter = list[i].GetFraction() * value;
         cout << "Значение после умножения " << i+1 << " дроби = " << counter << endl;
