@@ -25,7 +25,8 @@ class Fraction
        }
         Fraction(const Fraction &) // Конструктор копирования
         {
-            cout << "Конструктор копирования сработал!\n";
+            cout << "Конструктор копирования сработал!" << endl;
+            cout << "<<-------------->>  " << endl;
         }
         ~Fraction() // Деструктор
         {
@@ -106,6 +107,7 @@ int main()
     Fraction *list;
     cout << "Введите число нужных вам дробей: "; cin >> n;
     list = new Fraction[n];
+    Fraction CList(*list);
     SwitchInstructions();
     do 
     {
