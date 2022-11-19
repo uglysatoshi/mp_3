@@ -10,7 +10,7 @@ class Fraction
         double fract, numerator, denominator;
         bool sign;
         char yn;
-        int *p; // указатель на участок памяти
+        int *p; 
     public:
         Fraction() // Конструктор по умолчанию
         {
@@ -22,7 +22,20 @@ class Fraction
                 fract = fract * -1;
             cout << "Конструктор сработал!" << endl;
             cout << "<<-------------->>  " << endl;
-       }
+        }
+
+        Fraction(double numerator, double denominator) // Конструктор с параметрами
+        {
+            cout << "Введите числитель вашей дроби: "; cin >> numerator;
+            cout << "Введите знаменатель вашей дроби: "; cin >> denominator;
+            fract = numerator / denominator;
+            cout << "Сделать дробь отрацательной?(y/n) "; cin >> yn;
+            if (yn == 'y')
+                fract = fract * -1;
+            cout << "Конструктор сработал!" << endl;
+            cout << "<<-------------->>  " << endl;
+        }
+       
         Fraction(const Fraction &) // Конструктор копирования
         {
             cout << "Конструктор копирования сработал!" << endl;
